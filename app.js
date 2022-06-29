@@ -34,9 +34,12 @@ app.post('/',function(req,res){
         }
         else
         {   
-            res.send('<h1>please enter a valid city..');
+            res.sendFile(__dirname+'/failure.html');
         }
 
+app.post('/failure',function(req,res){
+    res.redirect('/');
+})
    
     
 })
